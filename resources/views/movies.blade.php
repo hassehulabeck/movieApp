@@ -9,7 +9,7 @@
               <div class="card">
                   <div class="card-header">{{ $movie->movieTitle }}</div>
                   <div class="card-body">
-                    {{ $movie->Year }}, ({{ $movie->category }})
+                    {{ $movie->Year }}, ({{ $movie->cat->categoryName }})
                   </div>
               </div>
             @endforeach
