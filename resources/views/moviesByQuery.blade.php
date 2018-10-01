@@ -9,11 +9,7 @@
               <div class="card">
                   <div class="card-header">{{ $movie->movieTitle }}</div>
                   <div class="card-body">
-                    {{ $movie->Year }}, ({{ $movie->cats->categoryName }})
-                    <p><i>
-                    @foreach($movie->actors as $actors)
-                      {{ $actors->actorName }},
-                    @endforeach
+                    {{ $movie->Year }}
                     </i></p>
                   </div>
               </div>

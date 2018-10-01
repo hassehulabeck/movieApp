@@ -41,7 +41,8 @@ class MovieController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $id = Movie::insert($request);
+        self::show($id);
     }
 
     /**
@@ -91,5 +92,11 @@ class MovieController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+
+    public function mbq ($firstYear, $lastYear) {
+      $movies = Movie::mbq($firstYear, $lastYear);
+      return view('moviesByQuery', $movies);
     }
 }
