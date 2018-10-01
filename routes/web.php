@@ -15,19 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/movies', 'MovieController@index');
-Route::get('/movies/{id}', 'MovieController@show');
-
-Route::post('/movies/insert/', 'MovieController@store');
+// Resource ger hela CRUD.
+Route::resource('/movies', 'MovieController');
+/*Route::get('/movies/{id}', 'MovieController@show');
 
 Route::get('/moviesByQuery', 'MovieController@mbq');
 Route::get('/moviesByQuery/between/{firstYear}/and/{lastYear}', 'MovieController@mbq');
-
+*/
 Route::get('/actorsByQuery', 'ActorController@getAll');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 

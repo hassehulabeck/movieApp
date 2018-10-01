@@ -9,6 +9,9 @@ class Movie extends Model
 {
     protected $primaryKey = "movieID";
     public $timestamps = false;
+    protected $fillable = [
+        'movieTitle', 'Year', 'category'
+    ];
 
     public function cats() {
       return $this->belongsTo('App\Category', 'category', 'categoryID');
